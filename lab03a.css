@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Dosis', sans-serif;
+	}
+
+h1{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+	font-size: 36px;
+	font-weight: 600;
+}
+p{
+	color: black;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+	text-align: center;
+}
+
+.dolphin{
+	flex-basis: 31%;
+	background: #fff3f3;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+}
+
+.threat{
+	flex-basis: 31%;
+	background: #fff3f3;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+}
+h3{
+	text-align: center;
+	font-weight: 600;
+	margin: 10px 0;
+	
+	}
+.selfie{
+	flex-basis: 31%;
+	background: #fff3f3;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 12px;
+	box-sizing: border-box;
+}

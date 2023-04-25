@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	
+<title> Mr. Potatoe Head</title>
+
+<link rel= "stylesheet" type="text/css" href="lab05.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+body{
+	color:white;
+	
+	background-color: #CBC3E3;
+}
+
+@font-face {
+
+font-family: 'Acme';
+
+font-style: normal;
+
+font-weight: 400;
+
+font-display: swap;
+
+src:url(https://fonts.gstatic.com/s/acme/v9/RrQfboBx-C5_XxrBbg.woff2) format('woff2');}
+
+h1,h5{
+
+text-align: center;
+
+margin: 0%;
+
+font-family: 'Acme';
+
+}
+
+#mainBody{
+
+width: 300px;
+
+display: block;
+
+margin-left: auto;
+
+margin-right: auto;
+
+}
+
+.movableImg{
+
+position: absolute;
+
+height: 90px;
+
+}
+
+
+</style>
+
+<body>
+
+<h1 style="font-size: 40;">Mr. Potato Head</h1> <br>
+
+<h5>By:Neha Madadi</h5>
+
+<img id="mainBody" src="Mr.potatoBody.gif" alt="potatoBody">
+
+<img style="left: 6px; top: 0px;" id="1" class="movableImg" src="potatoCaptainHat.gif" alt="CaptainHat">
+
+<img style="left: 6px; top: 100px;" id="2" class="movableImg" src="potatoEyePair.gif" alt="eyes">
+
+<img style="left: 6px; top: 200px;" id="3" class="movableImg" src="potatoGirlEyes.gif" alt="eyes">
+
+<img style="left: 6px; top: 400px;" id="4" class="movableImg" src="potatoLeftEar.gif" alt="ear">
+
+<img style="left: 56px; top: 395px;" id="5" class="movableImg" src="potatoRightEar.gif" alt="ear">
+
+<img style="left: 200px; top: 0px;" id="6" class="movableImg" src="potatoHat.gif" alt="hat">
+
+<img style="left: 200px; top: 100px;" id="7" class="movableImg" src="potatoLips.gif" alt="lips">
+
+<img style="left: 150px; top: 200px;" id="8" class="movableImg" src="potatoMouth.gif" alt="mouth">
+
+<img style="left: 6px; top: 300;" id="9" class="movableImg" src="potatoNose.gif" alt="nose">
+
+<img style="left: 200px; top: 300px;" id="10" class="movableImg" src="potatoSkinnyNose.gif" alt="nose">
+
+<img style="left: 200px; top: 400px;" id="11" class="movableImg" src="potatoTeeth.gif" alt="teeth">
+
+<script>
+
+dragElement(document.getElementById("1"));
+
+dragElement(document.getElementById("2"));
+
+dragElement(document.getElementById("3"));
+
+dragElement(document.getElementById("4"));
+
+dragElement(document.getElementById("5"));
+
+dragElement(document.getElementById("6"));
+
+dragElement(document.getElementById("7"));
+
+dragElement(document.getElementById("8"));
+
+dragElement(document.getElementById("9"));
+
+dragElement(document.getElementById("10"));
+
+dragElement(document.getElementById("11"));
+
+function dragElement(elmnt) {
+
+var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+elmnt.onmousedown = dragMouseDown;
+
+function dragMouseDown(e) {
+
+e = e || window.event;
+
+e.preventDefault();
+
+pos3 = e.clientX;
+
+pos4 = e.clientY;
+
+document.onmouseup = closeDragElement;
+
+document.onmousemove = elementDrag;
+
+}
+
+function elementDrag(e) {
+
+e = e || window.event;
+
+e.preventDefault();
+
+pos1 = pos3 - e.clientX;
+
+pos2 = pos4 - e.clientY;
+
+pos3 = e.clientX;
+
+pos4 = e.clientY;
+
+elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+
+elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+
+}
+
+function closeDragElement() {
+
+document.onmouseup = null;
+
+document.onmousemove = null;
+
+}
+
+}
+
+</script>
+</body>
+</html>
